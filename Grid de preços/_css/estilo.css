@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
+/* Formatação */
+
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+
+/* Grid */
+
+session#Grid {
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 1fr;
+    grid-template-areas: "cima cima"
+                         "esquerdo direito";
+    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+hgroup#cima {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-area: cima;
+    padding-bottom: 0px;
+    line-height: 25px;
+}
+
+
+hgroup#esquerdo {
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    grid-area: esquerdo;
+    background-color: rgb(43, 179, 177);
+    border-bottom-left-radius: 5px;
+
+}
+hgroup#direito {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-area: direito;
+    line-height: 20px;
+    background-color: rgb(74, 190, 189);
+    border-bottom-right-radius: 5px;
+}
+
+
+
+/* FORMATAÇÃO CIMA */
+.formatacao1 {
+    background-color: white;
+    font-family: 'Fira sans', 'sans-serif';
+    padding: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.formatacao1 h1 {
+    font-size: 19pt;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    color: rgb(47, 185, 174);
+}
+.formatacao1 h2 {
+    font-size: 14pt;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+    color: rgb(191, 223, 50);
+}
+.formatacao1 p {
+    font-size: 10pt;
+    margin-bottom: 40px;
+    padding: 0px;
+    color: rgb(189, 187, 187);
+}
+
+
+/* FORMATAÇÃO ESQUERDO E DIREITO */
+.formatacao2 {
+    font-family: 'Fira sans', 'sans-serif';
+    padding: 40px;
+}
+.formatacao2 p {
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 10pt;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+.formatacao2 h1 {
+    color: white;
+    font-size: 16pt;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.formatacao2 numb {
+    font-size: 20pt;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+}
+.formatacao2 h3 {
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 10pt;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+/* FORMATAÇÃO BOTÃO */
+hgroup#esquerdo button{
+    font-weight: bold;
+    background-color: rgb(191, 223, 50);
+    color: rgba(255, 255, 255, 0.849);
+    border-style: hidden;
+    border-radius: 4px;
+    border: none;
+    padding: 12px 75px 12px 75px;
+    margin: 0px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+hgroup#esquerdo  button:hover {
+    background-color: rgb(229, 255, 0);
+    color: rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 500px) {
+    session {
+        grid-template-columns: 100fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "cima"
+                             "esquerdo"
+                             "direito";
+        background-color: black;
+    }
+    .formatacao1 {
+        padding-left: 60px;
+    }
+    .formatacao2 {
+        padding-left: 60px;
+    }
+}
+
+
+
+
+
+

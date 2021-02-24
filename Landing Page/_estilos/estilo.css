@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2? family = Poppins: wght @ 400; 600 & display = swap');
+
+session#page {
+    display: grid;
+    grid-template-areas:  "img text1";
+    max-width: 1420px;
+    background: url("../images/bg-desktop.svg") no-repeat;
+    background-color: hsl(257, 40%, 49%); 
+    margin: 0 auto;
+}
+
+session#page img {
+    grid-area: img;
+    padding-top: 140px;
+    margin-bottom: 110px;
+    margin-left: 80px;
+
+}
+
+div#text {
+    grid-area: text1;
+    font-family: 'Poppins', sans-serif;
+    max-width: 500px;
+    padding-top: 140px;
+}
+div#text h1 {
+    color: white;
+    font-weight: 600;
+    line-height: 50px;
+}
+div#text p {
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 10pt;
+    line-height: 25px;
+}
+div#text button {
+    background-color: white;
+    color: rgb(87, 87, 87);
+    margin-top: 15px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+div#text button:hover {
+    background-color: violet;
+}
+
+@media only screen and (max-width: 1170px) {
+    session#page img {
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 1029px) {
+    session#page img {
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 919px) {
+    session#page img {
+        height: 200px;
+    }
+    div#text {
+        padding-bottom: 100px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    session#page img {
+        height: 150px;
+        margin-left: 20px;
+    }
+    div#text {
+        padding-top: 90px;
+    }
+    
+}
+@media only screen and (max-width: 648px) {
+    session#page {
+        grid-template-areas: "img"
+                             "text1";
+    }
+    session#page img {
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    div#text {
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    session#page {
+        grid-template-areas: "img"
+                             "text1";
+    }
+    session#page img {
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    div#text {
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 60px;
+        font-size: 50%;
+        word-wrap: break-word;
+    }
+}
